@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.Grad Certify.com/courses/data-science-with-generative-ai by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Jul 2025 04:36:36 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tag
+  -->
+  <title>Data Science with Generative AI | Grad Certify Course</title>
+  <meta name="title" content="Data Science with Generative AI | Grad Certify Course">
+  <meta name="description"
+    content="Master data science with generative AI at Grad Certify! Learn cutting-edge techniques, tools, and strategies to advance your career in the AI-driven data science field.">
+  <link rel="canonical" href="data-science-with-generative-ai.html" />
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-62F9G5SR2M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-62F9G5SR2M');
+  </script>
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="favicon.html" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style1.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&amp;family=Poppins:wght@400;500&amp;display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="../assets/images/hero-bg.svg">
+  <link rel="preload" as="image" href="../assets/images/hero-banner-1.html">
+  <link rel="preload" as="image" href="../assets/images/hero-banner-2.html">
+  <link rel="preload" as="image" href="../assets/images/hero-shape-1.svg">
+  <link rel="preload" as="image" href="../assets/images/hero-shape-2.png">
+  <style type="text/css">
+    .faq-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    .faq-title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: var(--ff-league_spartan);
+      color: var(--eerie-black-1);
+      font-size: 35px;
+    }
+
+    .faq-item {
+      margin-bottom: 10px;
+    }
+
+    .faq-question {
+      background: #67bc45;
+      /**#007bff;**/
+      color: #fff;
+      padding: 15px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      text-align: left;
+      width: 100%;
+      font-size: 18px;
+      border-radius: 4px;
+      transition: background 0.3s;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--ff-league_spartan);
+    }
+
+    .faq-question:hover {
+      background: indianred;
+      /**#0056b3;**/
+    }
+
+    .faq-answer {
+      padding: 15px;
+      background: #f1f1f1;
+      border-radius: 4px;
+      display: none;
+      font-family: var(--ff-league_spartan);
+      color: var(--eerie-black-1);
+    }
+
+    .faq-question .arrow {
+      transition: transform 0.3s;
+    }
+
+    .faq-question.active .arrow {
+      transform: rotate(180deg);
+    }
+
+    /** -----------Brochure Download --------- **/
+    .form-container {
+      position: fixed;
+      top: -150%;
+      left: 50%;
+      max-width: 400px;
+      width: 100%;
+      z-index: 0;
+      padding: 20px;
+      border-radius: 8px;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1.15);
+      box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+      transition: top 0ms ease-in-out 300ms, transform 300ms ease-in-out 0ms, opacity 300ms ease-in-out 0ms;
+    }
+
+    .form-container .close-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      margin: 0;
+      background-color: black;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 19px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .overlayActive {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 98;
+    }
+
+    .form-container.show {
+      top: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+      z-index: 99;
+      background-color: white;
+      transition: top 0ms ease-in-out 0ms, transform 300ms ease-in-out 0ms, opacity 300ms ease-in-out 0ms;
+    }
+
+    .form-container h2 {
+      margin-top: 0;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .form-container form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-container label {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    .form-container input {
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    .form-container button {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: indianred;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .form-container button:hover {
+      background-color: darkred;
+    }
+
+    @media(max-width: 450px) {
+      .form-container {
+        max-width: 300px;
+      }
+    }
+  </style>
+
+
+</head>
+
+<body id="top">
+  <!-- =============== HEADER ================ -->
+
+  <header class="header" data-header>
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/update-img/Grad-certify-New-logo.png" width="162" height="auto"
+          alt="Grad Certify logo">
+      </a>
+      <nav class="navbar" data-navbar>
+        <div class="wrapper">
+          <a href="../index.html" class="logo">
+            <img src="../assets/images/update-img/Grad-certify-New-logo.png" width="162" height="50"
+              alt="Grad Certify logo">
+          </a>
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="../index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="../about-us.html" class="navbar-link" data-nav-link>About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="../job-guaranteed-courses.html" class="navbar-link" data-nav-link>Courses</a>
+          </li>
+
+          <!-- <li class="navbar-item">
+            <a href="../milestone-achievers.html" class="navbar-link" data-nav-link>Our Milestone</a>
+          </li> -->
+
+          <li class="navbar-item">
+            <a href="../all-blogs.html" class="navbar-link" data-nav-link>Blogs</a>
+          </li>
+
+          <!-- <li>
+            <a href="../webinar.html" class="navbar-link" data-nav-link>Webinar</a>
+          </li> -->
+
+          <li>
+            <a href="../elevateX.html" class="navbar-link" data-nav-link>ElevateX</a>
+          </li>
+
+
+          <li class="navbar-item">
+            <a href="../contact-us.html" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+        </ul>
+
+      </nav>
+
+      <div class="header-actions">
+        <!--<a href="https://wa.me/917411464640" target="_blank" class="btn has-before" style="background-color:blue;">Free Counseling</a>-->
+
+        <a href="../contact-us.html" class="btn has-before">
+          <span class="span">Apply Now</span>
+
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+        </a>
+
+        <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+  <div class="popupOverlay"></div>
+
+  <!-- BODY -->
+
+  <!-- 
+        - #HERO
+      -->
+
+  <section class="section hero has-bg-image" id="home" aria-label="home"
+    style="background-image: url('../assets/images/course/ds5.png')">
+    <div class="container">
+
+      <div class="hero-content">
+
+        <h1 class="h1 section-title">
+          Data Science with<span class="span" style="color: #b70b45;">Generative AI </span>
+        </h1>
+
+        <p class="hero-text"> Unlock the power of Generative AI with Grad Certify's Data Science Program, guided by
+          industry experts.
+        </p>
+
+
+        <div class="btn-group" style="display: flex; gap: 20px;">
+          <a href="../contact-us.html" class="btn has-before">
+            <span class="span">Book a Free Demo</span>
+
+            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+          </a>
+
+          <!-- <button class="btn has-before" onclick="openForm()" style="background-color: #b70b45;"> -->
+
+
+            <!-- <span class="span">Download Brochure</span> -->
+
+
+
+
+
+            <!-- <ion-icon name="cloud-download-outline" aria-hidden="true"></ion-icon> -->
+          </button>
+          <div class="form-container" id="formContainer">
+            <h2>Fill your information</h2>
+            <button onClick="closeForm()" id="close-btn" class="close-btn">&times;</button>
+            <form id="infoForm" onsubmit="handleFormSubmit(event)">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required><br>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required><br>
+              <label for="phone">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" required><br>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <!-- --------------------------- -->
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 
+        - #COURSE CONTENT
+      -->
+  <section class="stats-card" aria-label="stats">
+    <div class="detail-group">
+      <ul class="ds">
+        <li style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+
+          <div class="stats-card" style="--color: 351, 83%, 61%">
+            <h3 class="card-title" style="color: #b70b45;">300+</h3>
+
+            <p class="card-text">Career Transition </p>
+          </div>
+
+          <div class="stats-card" style="--color: 102, 48%, 50%">
+            <h3 class="card-title">12 Months</h3>
+
+            <p class="card-text">Course Duration</p>
+          </div>
+
+          <div class="stats-card" style="--color: 260, 100%, 67%">
+            <h3 class="card-title">110%</h3>
+
+            <p class="card-text">Average Salary Hike</p>
+          </div>
+
+
+          <div class="stats-card" style="--color: 160, 100%, 67%">
+            <h3 class="card-title">$ 30k-100k</h3>
+
+            <p class="card-text">Average Annual Salary</p>
+          </div>
+
+          <div class="stats-card" style="--color: 42, 94%, 55%">
+            <h3 class="card-title">150+</h3>
+
+            <p class="card-text">Hiring Partners</p>
+          </div>
+    </div>
+
+    </li>
+    </ul>
+  </section>
+
+  <!-- PROGRAM OVERVIEW -->
+
+  <section class="section course" id="courses" aria-label="course">
+
+    <div class="container">
+
+      <p class="section-subtitle">Key Highlights</p>
+
+      <h2 class="h2 section-title">Program Synopsis</h2>
+
+
+      <ul class="about-list program-synopsis" style="list-style-type: none; padding: 0;">
+
+        <li class="about-item" style="text-align: center; flex: 1; font-size: 20px;">
+          <!--<ion-icon name="career" aria-hidden="true"></ion-icon> -->
+          <img src="../assets/images/icons/workingprofessional.png" style="max-width: 100%; height: auto;">
+          <span class="span">Guest Lectures</span>
+        </li>
+
+        <li class="about-item" style="text-align: center; flex: 1; font-size: 20px;">
+          <img src="../assets/images/icons/career-counselling-colored.png" style="max-width: 100%; height: auto;">
+
+          <!--<ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon> -->
+
+          <span class="span">360 Degree Career Support</span>
+        </li>
+
+        <li class="about-item" style="text-align: center; flex: 1; font-size: 20px;">
+          <!-- <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon> -->
+          <img src="../assets/images/icons/alumnistatus.png" style="max-width: 100%; height: auto;">
+          <span class="span">Expert-Led Instruction</span>
+        </li>
+
+        <li class="about-item" style="text-align: center; flex: 1; font-size: 20px;">
+          <img src="../assets/images/icons/basecamps.png">
+          <span class="span" style="display: block; margin-top: 8px;">Data Visualization Mastery</span>
+        </li>
+
+        <li class="about-item" style="text-align: center; flex: 1; font-size: 20px;">
+          <img src="../assets/images/icons/assignments.png">
+          <span class="span" style="display: block; margin-top: 8px;">Advanced Machine Learning</span>
+        </li>
+
+        <li class="about-item" style="text-align: center; flex: 1; font-size: 20px;">
+          <img src="../assets/images/icons/hoursoflearning.png">
+          <span class="span" style="display: block; margin-top: 8px;">Generative AI Techniques</span>
+        </li>
+
+        <li class="about-item" style="text-align: center; flex: 1; font-size: 20px;">
+          <img src="../assets/images/icons/hours-of-learning.png">
+          <span class="span" style="display: block; margin-top: 8px;">AI-Powered Analytics</span>
+        </li>
+
+        <li class="about-item" style="text-align: center; flex: 1; font-size: 20px;">
+          <img src="../assets/images/icons/mentorship.png" style="max-width: 100%; height: auto;">
+
+          <!--<ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon> -->
+
+          <span class="span">Capstone Project</span>
+        </li>
+
+        <li class="about-item" style="text-align: center; flex: 1; font-size: 20px;">
+          <img src="../assets/images/icons/mentorship.png" style="max-width: 100%; height: auto;">
+
+          <!--<ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon> -->
+
+          <span class="span">Job Assistance</span>
+        </li>
+
+      </ul>
+      <!-- ---------------------------- -->
+
+      <div class="course-content" style="margin-top: 20px;">
+        <span class="span"
+          style="color:var(--eerie-black-1); font-family: var(--ff-league_spartan); font-size: 20px;">Data Science with
+          Generative AI Program offers a comprehensive and advanced curriculum designed to equip you with cutting-edge
+          skills in data science and AI. You'll master Generative AI techniques, advanced machine learning, and big data
+          analytics, all while receiving personalized mentorship and career support.</span>
+
+      </div>
+    </div>
+  </section>
+  <!-- ------ Programming Languages and Tools Covered -------------- -->
+
+  <section class="tools" style="margin-top: -50px;">
+    <div class="tools-covered">
+      <h1>Programming Languages and Tools Covered</h1>
+      <!-- <p>Comprehensive understanding of the software development lifecycle.</p> -->
+
+      <figure class="all-tools">
+        <ul class="tools-list" style="display: flex;">
+          <li>
+            <img src="../assets/images/tools/tableau.png">
+          </li>
+
+          <li>
+            <img src="../assets/images/tools/python.png">
+          </li>
+
+          <li>
+            <img src="../assets/images/tools/aws.png">
+          </li>
+
+          <li>
+            <img src="../assets/images/tools/hadoop.png">
+          </li>
+
+          <li>
+            <img src="../assets/images/tools/Keras.png">
+          </li>
+
+          <li>
+            <img src="../assets/images/tools/MongoDB.png">
+          </li>
+
+          <li>
+            <img src="../assets/images/tools/msexcel.png">
+          </li>
+
+          <li>
+            <img src="../assets/images/tools/mysql.png">
+          </li>
+
+          <li>
+            <img src="../assets/images/tools/mysql.png">
+          </li>
+
+          <li>
+            <img src="../assets/images/tools/PowerBI.png">
+          </li>
+
+          <li>
+            <img src="../assets/images/tools/TensorFlow.png">
+          </li>
+
+        </ul>
+
+      </figure>
+    </div>
+  </section>
+
+  <!-- ------- PROGRAM CURRICULUM-------------------- -->
+  <section class="faq-section">
+    <h2 class="faq-title">Data Science with Generative AI Program Curriculum</h2>
+    <!--<p style="color:var(--eerie-black-1); font-family: var(--ff-league_spartan); font-size: 20px; text-align: center; margin-bottom:20px;">Premier content delivered by top-tier faculty and industry experts through engaging videos,</br> insightful case studies, and hands-on projects.</p> -->
+    <!-- ------------------------- -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Module 1: Introduction to Data Analytics & AI (6 Hrs)
+        <span class="arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        <h3>Overview of Data Analytics</h3>
+
+        <ol>
+          <li>1. Explanation of quantitative and qualitative data</li>
+          <li>2. Role of data analytics in decision-making processes</li>
+          <li>3. What does a typical data scientist do? What are realistic expectations?</li>
+        </ol>
+
+        <h3>Introduction to Artificial Intelligence</h3>
+        <ol>
+          <li>1. Differentiating AI, machine learning, and deep learning</li>
+          <li>2. Role of AI in predictive analytics and automation</li>
+        </ol>
+
+        <h3>Importance of GenAI Tools and Platforms</h3>
+        <ol>
+          <li>1. Specific tools like GPT (Generative Pre-trained Transformer), DALL-E</li>
+          <li>2. How these tools can be used to generate insights and automate tasks</li>
+          <li>3. From scratch to Gen AI – Roadmap</li>
+        </ol>
+      </div>
+    </div>
+    <!-- ----------------- -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Module 2: Fundamental of Data Handling (8 Hrs)
+        <span class="arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        <h3>Data Collection Techniques and Sources</h3>
+        <ol>
+          <li>1. Standards for Data Collection, GIGO concept</li>
+          <li>2. Evaluating the reliability and validity of data sources</li>
+        </ol>
+        <h3>Data Cleaning and Preprocessing</h3>
+        <ol>
+          <li>1. Exploratory Data Analysis – Basic Statistics and Data Summarization</li>
+          <li>2. Detailed methods for handling outliers and missing data (imputation techniques)</li>
+          <li>3. Data Standardization, Dimensionality Reduction concepts</li>
+        </ol>
+        <h3>Introduction to Tools for Data Manipulation</h3>
+        <ol>
+          <li>1. Exploratory Data Analysis using Excel</li>
+        </ol>
+      </div>
+    </div>
+    <!-- ----------------- -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Module 3: Statistics and Probability for Analytics With Python (30 Hrs)
+        <span class="arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        <h3>Core Python Concepts with Hands on</h3>
+        <ul>
+          <li>&nbsp; &#9679; Variables, Statements, Methods, Non Primitive Data Types, Loops, Functions</li>
+        </ul>
+        <h3>escriptive Statistics and Exploratory Data Analysis</h3>
+        <ul>
+          <li>&nbsp; &#9679; Using graphical summaries (box plots, histograms) to understand data</li>
+
+        </ul>
+
+        <h3>Inferential Statistics</h3>
+        <ul>
+          <li>&nbsp; &#9679; ampling, Significance testing, Extrapolation, Chi-Square testing</li>
+        </ul>
+        <h3>Probability Theory Basics</h3>
+        <ul>
+          <li>&nbsp; &#9679; Basics of Probability and importance in Predictive Analytics</li>
+        </ul>
+
+
+      </div>
+    </div>
+    <!-- ----------------- -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Module 4: Data Visualization Techniques (4 Hours)
+        <span class="arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        <h3>Principles of Effective Data Visualization</h3>
+        <ul>
+          <li>&nbsp; &#9679; Cognitive load theory in visualization design</li>
+          <li>&nbsp; &#9679; Color theory and its impact on data interpretation</li>
+        </ul>
+        <h3>Tools for Creating Dynamic Visualizations</h3>
+        <ul>
+          <li>&nbsp; &#9679; Advanced functionalities in Tableau (parameters, calculations)</li>
+          <li>&nbsp; &#9679; Creating and sharing interactive dashboards in Tableau,Power BI</li>
+
+        </ul>
+        <h3>Advanced Visualization Techniques</h3>
+        <ul>
+          <li>&nbsp; &#9679; Dashboards and Story Telling</li>
+        </ul>
+      </div>
+    </div>
+    <!-- ----------------- -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Module 5: Machine Learning Fundamentals (14 Hours)
+        <span class="arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        <h3>Overview of Machine Learning in Data Analytics</h3>
+        <ul>
+          <li>&nbsp; &#9679; Discussion on bias, variance, and model overfitting</li>
+          <li>&nbsp; &#9679; Comparative analysis of model performance metrics</li>
+        </ul>
+        <h3>Supervised vs Unsupervised Learning</h3>
+        <ul>
+          <li>&nbsp; &#9679; Detailed case studies on clustering (customer segmentation) and classification (email spam
+            detection)</li>
+        </ul>
+        <h3>Basics of Regression, Classification, and Clustering</h3>
+        <ul>
+          <li>&nbsp; &#9679; Advanced regression techniques (multiple regression, logistic regression)</li>
+          <li>&nbsp; &#9679; Model validation methods (cross-validation, ROC curves)</li>
+          <li>&nbsp; &#9679; Decision trees: A deeper look into information gain and Gini index </li>
+          <li>&nbsp; &#9679; Support vector machines: Understanding hyperplanes and kernel trick</li>
+          <li>&nbsp; &#9679; Other algorithms such as Naïve Bayes, KNN, Kmeans Clustering</li>
+        </ul>
+      </div>
+    </div>
+    <!-- ----------------- -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Module 6: Advanced Data Analytics and Building towards AI (24 Hours)
+
+        <span class="arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        <h3>What does AI mean? And how did we build current Ais?</h3>
+        <ul>
+          <li>&nbsp; &#9679; Unstructured data, Image, Text and sound embedding</li>
+          <li>&nbsp; &#9679; GIS data, QGIS demo</li>
+        </ul>
+        <h3>Natural Language Processing for Text Data Analysis</h3>
+        <ul>
+          <li>&nbsp; &#9679; Hands-on projects on sentiment analysis using Python libraries (NLTK, spaCy)</li>
+        </ul>
+        <h3>Predictive Analytics with Advanced Machine Learning Models</h3>
+        <ul>
+          <li>&nbsp; &#9679; Deep learning applications: Image recognition and natural language processing with
+            Tensorflow and Pytorch</li>
+        </ul>
+      </div>
+    </div>
+    <!-- ----------------- -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Module 7: Practical Applications of GenAI in Analytics (6 Hours)
+
+
+        <span class="arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        <h3>Case Studies from Various Industries</h3>
+        <ul>
+          <li>&nbsp; &#9679; Reporting Automation</li>
+          <li>&nbsp; &#9679; Generating Text, Images, using co-pilot, perplexity</li>
+        </ul>
+        <h3>Real-time Analytics Using AI</h3>
+        <ul>
+          <li>&nbsp; &#9679; Streaming data and introduction to IoT applications</li>
+        </ul>
+        <h3>Ethical and Privacy Considerations</h3>
+        <ul>
+          <li>&nbsp; &#9679; Discussing real-world scenarios of AI ethics breaches</li>
+        </ul>
+      </div>
+    </div>
+    <!-- ----------------- -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Module 8: Working with Big Data (4 Hours)
+
+        <span class="arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        <h3>Introduction to Big Data Technologies</h3>
+        <ul>
+          <li>&nbsp; &#9679; Scalability challenges and solutions with big data</li>
+        </ul>
+        <h3>Big Data Analytics with AI</h3>
+        <ul>
+          <li>&nbsp; &#9679; Practical use cases of AI in handling big data challenges</li>
+        </ul>
+        <h3>Understanding the Hadoop Ecosystem</h3>
+        <ul>
+          <li>&nbsp; &#9679; In-depth look at Hadoop components and their interrelationships</li>
+        </ul>
+      </div>
+    </div>
+    <!-- ----------------- -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Module 9: Capstone Project Mentorship (8 Hours)
+
+        <span class="arrow">▼</span>
+      </button>
+      <div class="faq-answer">
+        <h3>Project Design and Implementatio</h3>
+        <ul>
+          <li>&nbsp; &#9679; Guidance on defining project scope and objectives</li>
+        </ul>
+        <h3>Comprehensive Analysis Using AI Tools</h3>
+        <ul>
+          <li>&nbsp; &#9679; Integration of multiple AI techniques for holistic analysis</li>
+        </ul>
+        <h3>Presentation of Findings</h3>
+        <ul>
+          <li>&nbsp; &#9679; Effective techniques for visual and verbal presentation of complex data</li>
+        </ul>
+      </div>
+    </div>
+    <!-- ----------------- -->
+
+    </div>
+  </section>
+
+  <!-- ============ COURSE FEE ==================== -->
+  <section class="course_fee_title" style="background-color: whitesmoke;">
+    <div class="container course_fee_heading">
+      <h1 style="color:var(--eerie-black-1);"> Course Fee </h1>
+      <p style="color:var(--eerie-black-1);">You can choose any course you like, with the convenience of flexible EMI
+        plans, financing options.</p>
+      <!-- <h3 style="color:var(--eerie-black-1);">Start as low as ₹7,500/month</h3> -->
+      <p style="color:var(--eerie-black-1);">Program Fee - 
+        <!-- <s style="color:var(--eerie-black-1);"> ₹100,000 </s>  -->
+        $3,499.00 
+        <sub style="vertical-align: sub; color:var(--eerie-black-1); "></sub></p>
+
+      <center><a href="../contact-us.html" class="btn has-before">
+          <span class="span">Apply Now</span>
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+        </a></center>
+      <!-- <p style="color:var(--eerie-black-1);">Program Fee - <s style="color:var(--eerie-black-1);"> ₹100,000 </s> ₹90,000
+        <sub style="vertical-align: sub; color:var(--eerie-black-1); ">+Taxes</sub></p> -->
+
+      <center><img alt="gateways available" loading="lazy" width="320" height="100%" decoding="async" data-nimg="1"
+          class="paymentSection" style="color:transparent" src="../assets/images/payment_icons/payments.png"></center>
+
+    </div>
+  </section>
+
+  <!-- -----CERTIFICATE------------- -->
+
+  <section class="section about" id="about" aria-label="about" style="background-color: #fff;">
+    <div class="container">
+
+      <figure class="about-banner">
+
+        <div class="img-holder" style="--width: 650; --height: auto;">
+          <img src="../assets/images/update-img/Numan.jpg" alt="Certificates Image" width="650" height="auto"
+            loading="lazy" alt="about banner" class="img-cover">
+            <!-- <img src="../assets/images/Certificates/Numan.jpg " alt="Certificates Image" width="650" height="auto"
+            loading="lazy" alt="about banner" class="img-cover"> -->
+        </div>
+
+      </figure>
+
+      <div class="about-content">
+        <p class="section-subtitle">Data Science with Generative AI Program Certificate </p>
+
+        <h2 class="h2 section-title">
+          <span class="span" style="color: #b70b45;">Certificate</span>
+        </h2>
+
+        <p class="section-text"
+          style="color:var(--eerie-black-1); font-family: var(--ff-league_spartan); font-size: 20px;">
+          Upon successful completion of the Grad Certify Data Science with Generative AI Program, you will receive a
+          prestigious certification that validates your expertise in advanced data science and AI techniques.
+        </p>
+
+        <ul class="about-list">
+
+          <li class="about-item">
+            <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+            <span class="span">Boost your professional credentials and career prospects.</span>
+          </li>
+
+          <li class="about-item">
+            <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+            <span class="span">Master the latest tools and techniques in Generative AI.</span>
+          </li>
+
+          <li class="about-item">
+            <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+            <span class="span">Benefit from comprehensive job assistance</span>
+          </li>
+
+          <li class="about-item">
+            <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+            <span class="span">Connect with a community of data science professionals</span>
+          </li>
+
+          <li class="about-item">
+            <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+            <span class="span">Benefit from one-on-one mentorship</span>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========== MONEY BACK GURANTEE ================== -->
+  <!-- <section class="course_fee_title" style="background-color:whitesmoke;">
+ <div class="container course_fee_heading">
+  <center><img alt="Money Back Gurantee available" loading="lazy" width="100%" height="100%" decoding="async" data-nimg="1" class="paymentSection" style="color:transparent" src="../assets/images/money-back1.png"><a href="../money-back-guarantee.php" style="text-align:right; font-weight:bold;">Read Policy</a></center>
+
+  </div>
+</section> -->
+
+  <!-- INSTRUCTORS ---------------- -->
+  <section class="instructors">
+    <div class="top-instructors">
+      <h1>Lead Trainers</h1>
+      <!-- <p>Learn from India’s leading CCNA + LINUX faculty and industry leaders</p> -->
+
+      <div class="instructors-team">
+        <div class="instructor">
+          <div class="instructor-inner">
+            <div class="front">
+              <img src="../assets/images/update-img/Numan Mehraj.png" alt="Numan Mehraj">
+              <h2>Numan Mehraj </h2>
+              <a href="https://www.linkedin.com/in/numan-mehraj-b689478b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                target="_blank">LinkedIn</a>
+            </div>
+
+            <!--<div class="back">
+             <p>Dakshini Salian, Sr.Network Engineer at Google Network Engineer in Ireland.</p> 
+          </div> -->
+          </div>
+        </div>
+        <!-- --------------------- -->
+
+        <!--<div class="instructor">
+        <div class="instructor-inner">
+          <div class="front">
+            <img src="../assets/images/instructors/javed.png" alt="Another Instructor">
+            <h2>Javed Shaikh</h2>
+            <a href="https://www.linkedin.com/in/javed-shaikh-36b14391" target="_blank">LinkedIn</a>
+          </div>
+
+          <div class="back">
+            <p>This instructor has a rich background in data analytics and has worked with top-tier companies worldwide.</p>
+          </div>
+        </div>
+      </div>  -->
+
+        <!--<div class="instructor">
+        <div class="instructor-inner">
+          <div class="front">
+            <img src="../assets/images/instructors/amit.png" alt="Another Instructor">
+            <h2>Amit Kumar</h2>
+            <a href="https://www.linkedin.com/in/amit-kumar-a357421a" target="_blank">LinkedIn</a>
+          </div>
+
+          <div class="back">
+            <p>This instructor has a rich background in data analytics and has worked with top-tier companies worldwide.</p>
+          </div>
+        </div>
+      </div>  -->
+
+        <!--<div class="instructor">
+        <div class="instructor-inner">
+          <div class="front">
+            <img src="../assets/images/instructors/shriniwash.png" alt="Another Instructor">
+            <h2>Shriniwash Singh</h2>
+            <a href="https://www.linkedin.com/in/shriniwash-singh-a0490220" target="_blank">LinkedIn</a>
+          </div>
+
+          <div class="back">
+            <p>This instructor has a rich background in data analytics and has worked with top-tier companies worldwide.</p>
+          </div>
+        </div>
+      </div>  -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== FOOTER ================ -->
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" style="background-image: url('../assets/images/footer-bg.png')">
+
+    <div class="footer-top section">
+      <div class="container grid-list">
+
+        <div class="footer-brand">
+
+          <a href=" " class="logo">
+            <img src="../assets/images/update-img/Grad-certify-New-logo.png" width="162" height="50" alt="Grad Certify logo">
+          </a>
+
+          <p class="footer-brand-text">
+            TR 306, 3 Floor AltF 101 Okhla, NH-19, CRRI, ISHWAR NAGAR , OKHLA NEW DELHI - 110044
+          </p>
+          <p class="footer-brand-text">
+             USA address: <br>
+                   121/2 Sugarland, Huston, City Texas, 77479
+          </p>
+
+          <!-- <div class="wrapper">
+            <span class="span">Address:</span>
+
+            <address class="address"> B-Block, BHIVE Workspace - No.112, AKR Tech Park, "A" and, 7th Mile Hosur Rd, Krishna Reddy Industrial Area, Bengaluru, Karnataka- s560068</address>
+          </div> -->
+
+          <div class="wrapper">
+            <span class="span">Call:</span>
+
+              <a href="https://wa.me/+91-7006511648" class="footer-link">+91-7006511648</a>
+            <a href="tel:+1 202-788-3333" class="footer-link">+1 202-788-3333</a>
+          </div>
+
+          <div class="wrapper">
+            <span class="span">Email:</span>
+
+            <a href="mailto:support@Grad Certify.com" class="footer-link">
+              
+
+info@gradcertify.org</a>
+          </div>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Comapny</p>
+          </li>
+
+          <li>
+            <a href="../about-us.html" class="footer-link">About</a>
+          </li>
+
+          <li>
+            <a href="../job-guaranteed-courses.html" class="footer-link">Courses</a>
+          </li>
+
+          <li>
+            <a href="../policy/Privacy-Policy.html" class="footer-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="../policy/terms-and-conditions.html" class="footer-link">Terms & Conditions</a>
+          </li>
+
+          <li>
+            <a href="../policy/refund-cancellation-policy.html" class="footer-link">Refund/Cancellation policy</a>
+          </li>
+
+          <!--<li>-->
+          <!--  <a href="../policy/cancellation-policy" class="footer-link">Cancellation Policy</a>-->
+          <!--</li>-->
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Links</p>
+          </li>
+
+          <li>
+            <a href="../contact-us.html" class="footer-link">Contact Us</a>
+          </li>
+
+          <li>
+            <a href="../instructors.html" class="footer-link">Instructor</a>
+          </li>
+
+          <!-- <li>
+            <a href="../our-team.html" class="footer-link">Our Team</a>
+          </li> -->
+
+
+          <li>
+            <a href="../all-blogs.html" class="footer-link">Blogs</a>
+          </li>
+
+          <!--<li>-->
+          <!--  <a href="../news-updates" class="footer-link">News</a>-->
+          <!--</li>-->
+
+          <!--<li>
+            <a href="../current-openings.php" class="footer-link">Current Openings</a>
+          </li> -->
+
+          <li>
+            <a href="../faqs.html" class="footer-link">FAQs</a>
+          </li>
+
+          <li>
+            <a href="../index.html"
+              class="footer-link">Review Us</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Contacts</p>
+
+          <p class="footer-list-text">
+            Enter your email address to register to our newsletter subscription
+          </p>
+
+          <form action="#" class="newsletter-form">
+            <input type="email" name="email_address" placeholder="Your email" required class="input-field">
+
+            <button type="submit" class="btn has-before">
+              <span class="span">Subscribe</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </form>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=61554376480864&amp;mibextid=nwBsNb" class="social-link"
+                target="_blank" rel="noopener noreferrer">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.linkedin.com/company/Grad Certify-com/" class="social-link" target="_blank"
+                rel="noopener noreferrer">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.instagram.com/Grad Certify.s?igsh=aWFlYmExYTdxdDA5&amp;utm_source=qr"
+                class="social-link" target="_blank" rel="noopener noreferrer">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <!--<li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li> -->
+
+            <li>
+              <a href="https://www.youtube.com/@Grad Certify-LeadwithSkills" class="social-link" target="_blank"
+                rel="noopener noreferrer">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          Copyright 2025 All Rights Reserved by <a href="../index.html" class="copyright-link">Grad Certify</a>
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="../assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="../../unpkg.com/ionicons%405.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="../../unpkg.com/ionicons%405.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- program details js code -->
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const faqAnswer = button.nextElementSibling;
+
+        button.classList.toggle('active');
+
+        if (button.classList.contains('active')) {
+          faqAnswer.style.display = 'block';
+        } else {
+          faqAnswer.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+  <!-- download Brochure -->
+  <script>
+    function openForm() {
+      document.getElementById('formContainer').classList.add('show');
+      document.querySelector('.popupOverlay').classList.add("overlayActive")
+    }
+
+    function closeForm() {
+      document.getElementById('formContainer').classList.remove('show');
+      document.querySelector('.popupOverlay').classList.remove("overlayActive")
+    }
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      // Perform any form validation or processing here
+      //downloadBrochure();
+      viewBrochure();
+      document.getElementById('formContainer').classList.remove('show');
+    }
+
+    function viewBrochure() {
+      const link = document.createElement('a');
+      link.href = 'brochure/Master-Data-Science-with-Gen-AI.pdf'; // Replace with the actual path to your PDF
+      //link.download = 'Data Science.pdf';
+      link.target = '_blank'; // Open the PDF in a new tab
+      link.click();
+
+      // Close the form after opening the brochure
+      closeForm();
+    }
+  </script>
+
+</body>
+
+
+<!-- Mirrored from www.Grad Certify.com/courses/data-science-with-generative-ai by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Jul 2025 04:36:43 GMT -->
+
+</html>

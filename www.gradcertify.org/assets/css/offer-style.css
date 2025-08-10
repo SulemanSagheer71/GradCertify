@@ -1,0 +1,116 @@
+.offer-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  margin-top: 90px;
+  background: #0b243a; /* Dark Blue Background */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+
+.offer-highlight {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.offer-badge {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: white;
+  background: red;
+  padding: 5px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.offer-content {
+  flex: 2 1 auto;
+  text-align: center;
+}
+
+.offer-content .offer-text {
+  font-size: 1.5rem;
+  color: #fff; /* White for contrast */
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .offer-content .offer-text {
+    flex-wrap: nowrap;
+  }
+}
+
+.highlight-text {
+  font-weight: bold;
+  color: #00bfff; /* Sky Blue for emphasis */
+}
+
+.offer-actions {
+  flex: 3 1 auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.offer-button {
+  background: #007bff;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.offer-button:hover {
+  background: #0056b3;
+}
+
+.offer-timer {
+  display: flex;
+  gap: 15px;
+  text-align: center;
+}
+
+.offer-timer div {
+  font-size: 1.2rem;
+  color: #fff; /* White for contrast */
+}
+
+.offer-timer span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffd700; /* Gold for emphasis */
+}
+
+@media (min-width: 768px) {
+  .offer-highlight {
+    flex: 1 1 auto;
+    text-align: left;
+  }
+
+  .offer-content {
+    flex: 2 1 auto;
+    text-align: center;
+  }
+
+  .offer-actions {
+    flex: 1 1 auto;
+    text-align: right;
+  }
+
+  .offer-timer {
+    justify-content: flex-end;
+  }
+}

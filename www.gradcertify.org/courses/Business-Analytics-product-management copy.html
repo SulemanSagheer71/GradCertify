@@ -1,0 +1,2428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.Grad Certify.com/courses/ai-in-product-management by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Jul 2025 04:36:50 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+    - primary meta tag
+  -->
+    <title>AI in Product management | Grad Certify Course</title>
+    <meta name="title" content="">
+    <meta name="description" content="">
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="../favicon.png" type="image/svg+xml">
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style1.css">
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&amp;family=Poppins:wght@400;500&amp;display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" as="image" href="../assets/images/hero-bg.svg">
+    <link rel="preload" as="image" href="../assets/images/hero-banner-1.html">
+    <link rel="preload" as="image" href="../assets/images/hero-banner-2.html">
+    <link rel="preload" as="image" href="../assets/images/hero-shape-1.svg">
+    <link rel="preload" as="image" href="../assets/images/hero-shape-2.png">
+
+    <style type="text/css">
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --primary-color: #0A66C2;
+            --hover-color: #004182;
+            --bg-color: #ffffff;
+            --gray-color: #666;
+            --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease-in-out;
+        }
+
+        /* ===== GLOBAL STYLES ===== */
+        body {
+            padding-top: 90px;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+        }
+
+        section {
+            scroll-margin-top: 0px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero-ai {
+            position: relative;
+            padding: 20rem 0 100px;
+            background-image: url('../assets/images/course/pm-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 500px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-ai::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 255, 0.4);
+            z-index: 1;
+        }
+
+        .hero-ai * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-ai .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-content-ai {
+            flex: 1;
+        }
+
+        .hero-content-ai h1 {
+            font-size: 3.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+            line-height: 1.2;
+        }
+
+        .hero-content-ai p {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .cta-button {
+            background: linear-gradient(90deg, #ADD8E8, #87CEFA);
+            color: #000;
+            border: none;
+            padding: 15px 35px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            background-color: blue;
+        }
+
+        /* ===== BANNER SECTION ===== */
+        .hero-banner {
+            position: absolute;
+            bottom: -50%;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: #fff;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .banner-content {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 1200px;
+            text-align: center;
+            color: #000;
+        }
+
+        .banner-column {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .banner-column h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .banner-column p {
+            font-size: 14px;
+        }
+
+        .banner-column:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            height: 60%;
+            width: 2px;
+            background-color: #ddd;
+            transform: translateY(-50%);
+        }
+
+        /* ===== COURSE SERIES SECTION ===== */
+        .course-series {
+            padding-top: 250px;
+            background-color: #f9f9f9;
+        }
+
+        .course-series h2 {
+            text-align: left;
+            font-size: 4.2rem;
+            font-weight: 700;
+            font-family: sans-serif;
+            margin-bottom: 0px;
+        }
+
+        .series-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 50px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .series-info {
+            flex: 3;
+        }
+
+        .series-badge {
+            display: inline-block;
+            background-color: #e1f5fe;
+            color: #0288d1;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .series-rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .stars {
+            color: #f39c12;
+            margin-right: 10px;
+        }
+
+        .series-level {
+            margin-bottom: 20px;
+        }
+
+        .level-badge {
+            display: inline-block;
+            background-color: #e8f5e9;
+            color: #388e3c;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .recommended h4 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .recommended p {
+            color: #666;
+            font-size: 1.2rem;
+        }
+
+        .series-duration {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .duration-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .duration-item i {
+            color: #3498db;
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+
+        .series-cta {
+            flex: 1;
+            text-align: center;
+            padding-left: 40px;
+        }
+
+        /* ===== BUTTONS ===== */
+        .enroll-button {
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 50%;
+            margin-bottom: 15px;
+            white-space: nowrap;
+        }
+
+        .enroll-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .course1-btn {
+            background: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            white-space: nowrap;
+        }
+
+        .course1-btn:hover {
+            background: #2c7eb8;
+        }
+
+        /* ===== COURSE CARDS ===== */
+        .course-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .course-card {
+            display: flex;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 60px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(130deg, #3498db, #0b132b);
+        }
+
+        .course-content {
+            padding: 25px;
+            flex: 1;
+        }
+
+        .course-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .course-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .course-details {
+            display: flex;
+            gap: 20px;
+        }
+
+        .course-detail {
+            display: flex;
+            align-items: center;
+            color: #666;
+            font-size: 1.5rem;
+        }
+
+        .course-detail i {
+            color: #3498db;
+            margin-right: 5px;
+        }
+
+        .course-btn-series {
+            margin-top: -15px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        /* ===== SKILLS SECTION ===== */
+        .skills-section {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .skills-section h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            text-align: left;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-badge {
+            background-color: #f1f8fe;
+            color: #3498db;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 1.4rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .skill-badge:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        /* ===== FACULTY SECTION ===== */
+        .faculty {
+            background-color: var(--bg-color);
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .faculty h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .faculty h2::after {
+            content: "";
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            display: block;
+            margin: 8px auto 0;
+        }
+
+        .faculty-slider {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .faculty-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .faculty-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            display: block;
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .faculty-card h3 {
+            margin-bottom: 5px;
+            font-size: 1.7rem;
+        }
+
+        .faculty-card p {
+            color: var(--gray-color);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .linkedin-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .linkedin-icon a {
+            font-size: 24px;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .linkedin-icon a:hover {
+            color: var(--hover-color);
+        }
+
+        /* ===== CERTIFICATION SECTION ===== */
+        .certificate-section {
+            max-width: 1100px;
+            margin: 50px auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .certificate-image {
+            flex: 1;
+            max-width: 40%;
+            text-align: center;
+        }
+
+        .certificate-image img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .certificate-image img:hover {
+            transform: scale(1.5);
+        }
+
+        .certificate-content {
+            flex: 2;
+            padding-left: 30px;
+            text-align: left;
+        }
+
+        .certificate-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .certificate-title::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #ff5722;
+            margin: 8px 0;
+        }
+
+        .certificate-text {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .certificate-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .certificate-list li {
+            font-size: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #333;
+        }
+
+        .certificate-list li i {
+            color: #ff5722;
+            font-size: 18px;
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .faq-title::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #ff5722;
+            margin: 5px auto;
+        }
+
+        .faq {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background: #fff;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .faq-question:hover {
+            border-left: 4px solid #ff5722;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 15px;
+            font-size: 14px;
+            color: #333;
+            background: #fafafa;
+            border-top: 1px solid #ddd;
+        }
+
+        .faq.active .faq-answer {
+            display: block;
+        }
+
+        .faq.active .faq-question {
+            border-left: 4px solid #ff5722;
+            color: #ff5722;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq.active .faq-icon {
+            transform: rotate(180deg);
+            color: #ff5722;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #3498db, #0b132b);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-content p {
+            font-size: 1.7rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta .cta-button {
+            background-color: white;
+            color: #000;
+            border: none;
+        }
+
+        .cta .cta-button:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* ===== POPUP FORM STYLES ===== */
+        /* Base Structure and Overlay */
+        .popupOverlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+        }
+
+        .popup-form {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0) scale(0.95);
+            width: 95vw;
+            height: auto;
+            max-width: 480px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+            z-index: 1001;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            backface-visibility: hidden;
+            will-change: transform, opacity;
+        }
+
+        .popup-form.active {
+            transform: translate3d(-50%, -50%, 0) scale(1);
+            opacity: 1;
+        }
+
+        /* Popup Content Layout */
+        .popup-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        /* Popup Header */
+        .popup-header {
+            background-color: #fff;
+            padding: 20px 25px 15px;
+            text-align: center;
+            position: relative;
+            flex-shrink: 0;
+            border-bottom: 1px solid #f0f0f0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .popup-logo {
+            width: 100px;
+            height: auto;
+            margin: 0 auto 12px;
+            display: block;
+        }
+
+        .popup-header h2 {
+            margin: 0;
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #333;
+            letter-spacing: -0.5px;
+        }
+
+        .popup-subtitle {
+            margin: 5px 0 0;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* Close Button */
+        .close-popup {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 32px;
+            height: 32px;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #555;
+            cursor: pointer;
+            transition: all 0.2s;
+            z-index: 10;
+            border: none;
+        }
+
+        .close-popup:hover {
+            background-color: #e0e0e0;
+            transform: rotate(90deg);
+        }
+
+        /* Form Elements */
+        form#contactForm {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .form-fields {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 100%;
+        }
+
+        .form-group {
+            margin: 0;
+            text-align: left;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Form Labels */
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #3498db;
+            font-size: 1.1rem;
+            letter-spacing: 0.2px;
+        }
+
+        /* Form Inputs */
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            background-color: #f8f8f8;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+            background-color: #fff;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #aaa;
+            font-size: 1.05rem;
+        }
+
+        .form-group textarea {
+            resize: none;
+            height: 45px;
+        }
+
+        /* Submit Button */
+        .submit-btn-container {
+            margin-top: 25px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: #0077ff;
+            color: white;
+            border: none;
+            padding: 14px 0;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            -webkit-font-smoothing: antialiased;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Text Rendering */
+        .popup-header h2,
+        .popup-subtitle,
+        .form-group label,
+        .form-group input,
+        .form-group textarea,
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Animation */
+        .popup-form.show {
+            display: block;
+            animation: popupFadeIn 0.4s forwards;
+        }
+
+        @keyframes popupFadeIn {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.9);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        /* ===== RESPONSIVE MEDIA QUERIES ===== */
+        /* Large Devices (Desktop) */
+        @media (max-width: 1024px) {
+
+            /* General responsive styles */
+            .hero-content-ai h1 {
+                font-size: 3rem;
+            }
+
+            .hero-content-ai p {
+                font-size: 1.2rem;
+            }
+
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 1.5rem;
+            }
+
+            .banner-column {
+                padding: 20px 15px;
+            }
+
+            .course-series h2 {
+                font-size: 3.2rem;
+            }
+
+            .enroll-button {
+                width: 80%;
+            }
+        }
+
+        /* Tablet and Small Laptop Adjustments */
+        @media (max-width: 813px) {
+
+            /* Banner adjustments for medium screens */
+            .hero-banner {
+                height: auto;
+                bottom: -60%;
+                padding: 25px 0;
+            }
+
+            .banner-content {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                width: 90%;
+            }
+
+            .banner-column {
+                padding: 15px;
+                position: relative;
+            }
+
+            .banner-column:not(:last-child)::after {
+                display: none;
+            }
+
+            .banner-column h3 {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            .banner-column p {
+                font-size: 13px;
+                line-height: 1.4;
+            }
+
+            /* Add dividers between columns */
+            .banner-column:nth-child(1),
+            .banner-column:nth-child(2) {
+                border-bottom: 1px solid #eee;
+                padding-bottom: 20px;
+                margin-bottom: 5px;
+            }
+
+            .banner-column:nth-child(odd) {
+                border-right: 1px solid #eee;
+            }
+
+            /* Course series adjustments */
+            .course-series {
+                padding-top: 350px;
+            }
+        }
+
+        /* Medium Devices (Tablets and small laptops) */
+        @media (max-width: 992px) {
+            .enroll-button {
+                font-size: 1.2rem;
+                padding: 12px 20px;
+                width: auto;
+                min-width: 150px;
+            }
+        }
+
+        /* Medium Devices (Tablets) */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+
+            /* Hero section mobile adjustments */
+            .hero-ai {
+                height: 420px;
+                padding-bottom: 80px;
+            }
+
+            .hero-content-ai h1 {
+                font-size: 3rem;
+                margin-bottom: 15px;
+            }
+
+            .hero-content-ai h3 {
+                font-size: 1.6rem;
+                line-height: 1.4;
+                margin-bottom: 15px;
+            }
+
+            .hero-content-ai p {
+                font-size: 1.2rem;
+                line-height: 1.5;
+                margin-bottom: 25px;
+            }
+
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 1.4rem;
+            }
+
+            /* Banner mobile adjustments */
+            .hero-banner {
+                height: auto;
+                bottom: -60%;
+                padding: 15px 0;
+            }
+
+            .banner-content {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .banner-column {
+                flex: 0 0 45%;
+                padding: 15px 10px;
+            }
+
+            .banner-column h3 {
+                font-size: 16px;
+            }
+
+            .banner-column p {
+                font-size: 12px;
+            }
+
+            .banner-column:not(:last-child)::after {
+                display: none;
+            }
+
+            /* Course series mobile adjustments */
+            .course-series {
+                padding-top: 350px;
+            }
+
+            .course-series h2 {
+                font-size: 2.5rem;
+                text-align: center;
+            }
+
+            .series-header {
+                flex-direction: column;
+                padding: 20px 15px;
+            }
+
+            .series-cta {
+                padding-left: 0;
+                margin-top: 20px;
+                width: 100%;
+            }
+
+            .enroll-button {
+                width: 60%;
+                font-size: 1.3rem;
+                white-space: nowrap;
+                padding: 12px 20px;
+                min-width: 150px;
+            }
+
+            .series-duration {
+                grid-template-columns: 1fr;
+            }
+
+            /* Course cards mobile adjustments */
+            .course-card {
+                flex-direction: column;
+            }
+
+            .course-number {
+                min-width: 100%;
+                min-height: 50px;
+            }
+
+            .course-details {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .course-btn-series {
+                justify-content: center;
+                margin-top: 20px;
+                width: 100%;
+            }
+
+            .course1-btn {
+                width: 100%;
+                padding: 15px 20px;
+                font-size: 1.4rem;
+                border-radius: 8px;
+                max-width: 300px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .skills-list {
+                justify-content: center;
+            }
+
+            /* Certificate mobile adjustments */
+            .certificate-section {
+                flex-direction: column;
+                padding: 20px 15px;
+            }
+
+            .certificate-image {
+                max-width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .certificate-content {
+                padding-left: 0;
+            }
+
+            /* CTA mobile adjustments */
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+
+            .cta-content p {
+                font-size: 1.2rem;
+            }
+
+            /* Faculty mobile adjustments */
+            .faculty h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Small Devices (Mobile) */
+        @media (max-width: 576px) {
+
+            /* Hero mobile adjustments */
+            .hero-ai {
+                height: auto;
+                min-height: 400px;
+                padding-bottom: 0;
+                padding-top: 15px;
+                overflow: visible;
+                position: relative;
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .hero-content-ai {
+                padding-bottom: 40px;
+                padding-top: 40px;
+                margin-top: 10px;
+            }
+
+            .hero-content-ai h1 {
+                font-size: 2.4rem;
+                margin-bottom: 12px;
+            }
+
+            .hero-content-ai h3 {
+                font-size: 1.4rem;
+                line-height: 1.3;
+                margin-bottom: 12px;
+            }
+
+            .hero-content-ai p {
+                font-size: 1.1rem;
+                line-height: 1.5;
+                margin-bottom: 20px;
+            }
+
+            .cta-button {
+                padding: 10px 25px;
+                font-size: 1.3rem;
+                font-weight: 700;
+            }
+
+            /* Banner mobile adjustments */
+            .hero-banner {
+                position: relative;
+                top: auto;
+                left: auto;
+                bottom: auto;
+                margin-top: 0;
+                padding: 0;
+                height: auto;
+                z-index: 2;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.95);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                order: 2;
+            }
+
+            .banner-content {
+                flex-direction: column;
+                width: 90%;
+                margin: 0 auto;
+                padding: 20px 0;
+                display: flex;
+                align-items: center;
+                text-align: center;
+            }
+
+            .banner-column {
+                flex: 0 0 100%;
+                padding: 15px;
+                border-bottom: 1px solid #eee;
+                margin-bottom: 10px;
+                background: transparent;
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+                display: block;
+                float: none;
+            }
+
+            .banner-column:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+            }
+
+            .banner-column:not(:last-child)::after {
+                display: none;
+            }
+
+            .banner-column h3 {
+                text-align: center;
+                display: block;
+                width: 100%;
+                color: #333;
+            }
+
+            .banner-column p {
+                text-align: center;
+                display: block;
+                width: 100%;
+                color: #666;
+            }
+
+            /* Course mobile adjustments */
+            .course-series {
+                padding-top: 30px;
+                margin-top: 0;
+                position: relative;
+                z-index: 3;
+            }
+
+            .course-series h2 {
+                font-size: 2rem;
+            }
+
+            .series-badge,
+            .level-badge {
+                font-size: 1rem;
+            }
+
+            .recommended h4 {
+                font-size: 1.5rem;
+            }
+
+            .course-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .course-detail {
+                font-size: 1.2rem;
+            }
+
+            /* Button mobile adjustments */
+            .course-btn-series {
+                margin-top: 25px;
+            }
+
+            .course1-btn {
+                padding: 12px 15px;
+                font-size: 1.2rem;
+                margin-top: 5px;
+                max-width: 250px;
+                background: linear-gradient(to right, #3498db, #2c7eb8);
+                font-weight: 600;
+                letter-spacing: 0.5px;
+            }
+
+            /* Other sections mobile adjustments */
+            .skill-badge {
+                font-size: 1rem;
+            }
+
+            .faculty-slider {
+                grid-template-columns: 1fr;
+            }
+
+            .faculty h2 {
+                font-size: 2rem;
+            }
+
+            .faculty-card img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .faculty-card h3 {
+                font-size: 1.5rem;
+            }
+
+            .certificate-title {
+                font-size: 1.8rem;
+            }
+
+            .certificate-text {
+                font-size: 14px;
+            }
+
+            .certificate-list li {
+                font-size: 13px;
+            }
+
+            .faq-question {
+                font-size: 14px;
+                padding: 12px;
+            }
+
+            .faq-answer {
+                font-size: 13px;
+                padding: 12px;
+            }
+
+            .cta {
+                padding: 50px 0;
+            }
+
+            .cta-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .cta-content p {
+                font-size: 1rem;
+            }
+
+            /* Popup Form Styles - Mobile */
+            .popup-form {
+                width: 92vw;
+                max-width: 450px;
+                max-height: 450px;
+                border-radius: 16px;
+            }
+
+            .popup-header {
+                padding: 15px 20px 10px;
+            }
+
+            .popup-logo {
+                width: 80px;
+                margin-bottom: 8px;
+            }
+
+            .popup-header h2 {
+                font-size: 1.7rem;
+            }
+
+            .popup-subtitle {
+                font-size: 1rem;
+                margin: 3px 0 0;
+            }
+
+            .close-popup {
+                top: 12px;
+                right: 12px;
+                width: 28px;
+                height: 28px;
+                font-size: 16px;
+            }
+
+            form#contactForm {
+                padding: 10px 20px 15px;
+            }
+
+            .form-group label {
+                font-size: 1.1rem;
+                margin-bottom: 4px;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 10px 12px;
+                font-size: 1.05rem;
+            }
+
+            .form-group textarea {
+                height: 40px;
+            }
+
+            .submit-btn {
+                padding: 12px;
+                font-size: 1.15rem;
+            }
+        }
+
+        /* Extra Small Devices */
+        @media (max-width: 360px) {
+
+            /* Hero extra small adjustments */
+            .hero-ai {
+                min-height: 380px;
+                padding-top: 10px;
+            }
+
+            .hero-content-ai {
+                padding-bottom: 30px;
+                padding-top: 35px;
+            }
+
+            .hero-content-ai h1 {
+                font-size: 2.1rem;
+                margin-bottom: 10px;
+            }
+
+            .hero-content-ai h3 {
+                font-size: 1.25rem;
+                line-height: 1.3;
+            }
+
+            .hero-content-ai p {
+                font-size: 1rem;
+                margin-bottom: 18px;
+            }
+
+            .cta-button {
+                padding: 10px 22px;
+                font-size: 1.2rem;
+            }
+
+            /* Banner extra small adjustments */
+            .banner-content {
+                width: 95%;
+                padding: 15px 0;
+            }
+
+            .banner-column {
+                padding: 10px;
+            }
+
+            .banner-column h3 {
+                font-size: 15px;
+                margin-bottom: 5px;
+            }
+
+            .banner-column p {
+                font-size: 11px;
+            }
+
+            /* Course extra small adjustments */
+            .course-series {
+                margin-top: 0;
+            }
+
+            .course-series h2 {
+                font-size: 1.8rem;
+            }
+
+            .course-content {
+                padding: 15px;
+            }
+
+            .course-content h3 {
+                font-size: 1.3rem;
+            }
+
+            /* Button extra small adjustments */
+            .course-btn-series {
+                margin-top: 20px;
+            }
+
+            .course1-btn {
+                font-size: 1.1rem;
+                padding: 10px 15px;
+                max-width: 220px;
+            }
+
+            /* Other sections extra small adjustments */
+            .skills-section {
+                padding: 20px 15px;
+            }
+
+            .skills-section h3 {
+                font-size: 1.5rem;
+            }
+
+            .faq-container {
+                padding: 15px;
+            }
+
+            .faq-title {
+                font-size: 20px;
+            }
+
+            /* Popup Form Styles - Extra Small */
+            .popup-form {
+                width: 95vw;
+                height: 95vw;
+            }
+
+            .popup-header {
+                padding: 12px 15px 8px;
+            }
+
+            .popup-logo {
+                width: 70px;
+            }
+
+            .popup-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .form-group label {
+                font-size: 1rem;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 8px 10px;
+                font-size: 1rem;
+            }
+
+            .form-group textarea {
+                height: 35px;
+            }
+
+            .submit-btn {
+                padding: 10px;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Height-specific adjustments for all screen sizes */
+        @media (max-height: 700px) {
+
+            /* Popup Form height adjustments */
+            .popup-form {
+                height: auto;
+                min-height: 530px;
+            }
+
+            .form-fields {
+                gap: 12px;
+            }
+
+            .form-group label {
+                margin-bottom: 4px;
+            }
+
+            .submit-btn-container {
+                margin-top: 18px;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body id="top">
+    <!-- =============== HEADER ================ -->
+    <header class="header" data-header>
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/update-img/New-GradCertify Logo.png" width="162" height="auto"
+                    alt="Grad Certify logo">
+            </a>
+            <nav class="navbar" data-navbar>
+                <div class="wrapper">
+                    <a href="../index.html" class="logo">
+                        <img src="../assets/images/update-img/New-GradCertify Logo.png" width="162" height="50"
+                            alt="Grad Certify logo">
+                    </a>
+                    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                </div>
+
+                <ul class="navbar-list">
+
+                    <li class="navbar-item">
+                        <a href="../index.html" class="navbar-link" data-nav-link>Home</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="../about-us.html" class="navbar-link" data-nav-link>About</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="../job-guaranteed-courses.html" class="navbar-link" data-nav-link>Courses</a>
+                    </li>
+
+                    <!-- <li class="navbar-item">
+            <a href="../milestone-achievers.html" class="navbar-link" data-nav-link>Our Milestone</a>
+          </li> -->
+
+                    <li class="navbar-item">
+                        <a href="../all-blogs.html" class="navbar-link" data-nav-link>Blogs</a>
+                    </li>
+
+                    <!-- <li>
+            <a href="../webinar.html" class="navbar-link" data-nav-link>Webinar</a>
+          </li> -->
+
+                    <li>
+                        <a href="../elevateX.html" class="navbar-link" data-nav-link>ElevateX</a>
+                    </li>
+
+
+                    <li class="navbar-item">
+                        <a href="../contact-us.html" class="navbar-link" data-nav-link>Contact</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <div class="header-actions">
+                <!--<a href="https://wa.me/917411464640" target="_blank" class="btn has-before" style="background-color:blue;">Free Counseling</a>-->
+
+                <a href="../contact-us.html" class="btn has-before">
+                    <span class="span">Apply Now</span>
+
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a>
+
+                <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
+                    <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+                </button>
+
+            </div>
+
+            <div class="overlay" data-nav-toggler data-overlay></div>
+
+        </div>
+    </header>
+    <div class="popupOverlay"></div>
+
+    <!-- Popup Form -->
+    <div class="popup-form" id="contactPopup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <div class="popup-header">
+                <img src="../assets/images/update-img/New-GradCertify Logo.png" alt="Grad Certify Logo"
+                    class="popup-logo">
+                <h2>Get in Touch</h2>
+                <p class="popup-subtitle">We'll help you find the right course for your needs</p>
+            </div>
+            <form id="contactForm">
+                <div class="form-fields">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">How can we help you?</label>
+                        <textarea id="message" name="message" rows="1"
+                            placeholder="Tell us what you're looking for"></textarea>
+                    </div>
+                </div>
+                <div class="submit-btn-container">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- BODY -->
+
+    <!-- - #HERO -->
+    <section class="hero-ai">
+        <div class="container">
+            <div class="hero-content-ai">
+                <h1> Certification Program in Business Analytics with Gen & Agentic AI from Grad Certify </h1>
+                <p style="color: #fff; ">Learn from global industry-leading experts</p>
+                <p style="color: #fff;">Master AI for business Analytics success </p>
+                <p style="color: #fff; ">Placement support for top roles </p>
+                <button class="cta-button">Get Started</button>
+            </div>
+        </div>
+        <!-- Extended Banner with 4 Columns -->
+        <div class="hero-banner">
+            <div class="container banner-content">
+                <div class="banner-column">
+                    <h3>300+</h3>
+                    <p>Career Transition</p>
+                </div>
+                <div class="banner-column">
+                    <h3>110%</h3>
+                    <p>Average Salary Hike</p>
+                </div>
+                <div class="banner-column">
+                    <h3>$ 30k-100k</h3>
+                    <p>Average Annual Salary</p>
+                </div>
+                <div class="banner-column">
+                    <h3>150+</h3>
+                    <p>Hiring Partners</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =========== COURSE SERIES ================= -->
+    <section id="courses" class="course-series">
+        <div class="container">
+            <h2>Course Series</h2><br>
+            <!-- <div class="series-header">
+            <div class="series-info"> -->
+            <!--<div class="series-badge">3 course series</div>-->
+            <!--<div class="series-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span>4.7 (42 reviews)</span>
+                </div> -->
+            <!--<div class="series-level">
+                    <span class="level-badge">Beginner & Experience level</span> -->
+            <!--<div class="recommended">
+                        <h4>Recommended experience</h4>
+                        <p>No programming experience or prior knowledge of machine learning / AI required.</p>
+                    </div> 
+                </div>-->
+            <!-- <div class="series-duration">
+                    <div class="duration-item">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>Max 6 months</span>
+                    </div>
+                    <div class="duration-item">
+                        <i class="far fa-clock"></i>
+                        <span>at 5 hours a week</span>
+                    </div>
+                    <div class="duration-item">
+                        <i class="fas fa-laptop"></i>
+                        <span>Flexible schedule</span>
+                    </div>
+                    <div class="duration-item">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Learn at your own pace</span>
+                    </div>
+                </div> 
+            </div>-->
+            <!--<div class="series-cta">
+                <a href="../contact-us"> <button class="enroll-button">Enroll Now</button></a>
+            </div> 
+        </div>-->
+            <div class="course-list">
+                <div class="course-card">
+                    <div class="course-number">1</div>
+                    <div class="course-content">
+                        <h3>6-Month Comprehensive Program Business Analytics with Gen & Agentic AI from Grad Certify  </h3>
+                        <p>6-Month Comprehensive Program on AI in Product Management – Master AI-driven strategies for
+                            smarter decision-making and innovation.</p>
+                        <div class="course-details">
+                            <div class="course-detail">
+                                <i class="far fa-clock"></i>
+                                <span>6 Month</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span>Program Fee - <b> $3,499.00</b> </span>
+                                <!-- Program Fee - $3,499.00 +Taxes -->
+                            </div>
+                            <!--<div class="course-detail">
+                            <i class="fas fa-star"></i>
+                            <span>4.7 (12 ratings)</span>
+                        </div> -->
+                        </div>
+                        <div class="course-btn-series">
+                            <a href="../contact-us.html"><button
+                                    class="course1-btn">Enroll Now</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="course-card">
+                <div class="course-number">2</div>
+                <div class="course-content">
+                    <h3> Crash Course - AI in Product Management</h3> -->
+                <!-- <p>Crash Course - AI in Product Management: Fast-track your expertise in AI-driven product strategies and innovation.</p>
+                    <div class="course-details">
+                         <div class="course-detail">
+                            <i class="far fa-clock"></i>
+                            <span>20 hours</span>
+                        </div>
+                        <div class="course-detail">
+                            <i class="fas fa-star"></i>
+                            <span>4.8 (16 ratings)</span>
+                        </div>
+                    </div> -->
+                <!-- <div class="course-btn-series">
+                        <a href="../coming-soon.html"><button class="course1-btn">Coming Soon</button></a>
+                    </div>
+                </div>
+            </div> -->
+
+                <!-- <div class="course-card">
+                <div class="course-number">3</div>
+                <div class="course-content">
+                    <h3>MBA-Oriented AI in Product Management</h3> -->
+                <!-- <p>MBA-Oriented AI in Product Management: Integrating AI with business strategy for impactful product leadership.</p>
+                    <div class="course-details">
+                        <div class="course-detail">
+                            <i class="far fa-clock"></i>
+                            <span>20 hours</span>
+                        </div>
+                        <div class="course-detail">
+                            <i class="fas fa-star"></i>
+                            <span>4.7 (21 ratings)</span>
+                        </div>
+                    </div> -->
+                <div class="course-btn-series">
+                    <!-- <a href="../coming-soon.html"><button class="course1-btn">Coming Soon</button></a>
+                    </div>
+                </div>
+            </div> -->
+                </div>
+                <div class="skills-section">
+                    <h3>Skills you'll gain</h3>
+                    <div class="skills-list" style="display: flex; justify-content: space-evenly;
+            align-items: center;">
+                        <span class="skill-badge"><img src="../assets/images/Skills/Chatgpt.png" width="100"
+                                alt=""></span>
+                        <span class="skill-badge"><img src="../assets/images/Skills/pandas.png" width="100"
+                                alt=""></span>
+                        <span class="skill-badge"><img src="../assets/images/Skills/Excel.png" width="50" alt=""></span>
+                        <span class="skill-badge"><img src="../assets/images/Skills/Matpltlib.png"
+                                style="padding-top: 10px;" width="100" alt=""></span>
+                        <span class="skill-badge"><img src="../assets/images/Skills/Numpay.png" width="100"
+                                alt=""></span>
+                        <span class="skill-badge"><img src="../assets/images/Skills/power Bi.png" width="50"
+                                alt=""></span>
+                        <span class="skill-badge">& More</span>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- ========== Ready to make a big difference in your career? ========= -->
+    <!-- <section id="faculty" class="faculty lazy-section" style="background-color: #000;">
+        <div class="container">
+            <h2 style="color:#fff">Ready to Make a Big Difference In Your Career?</h2>
+            <img src="../assets/images/course/application-process.png" style="width: 100%; height: auto;">
+        </div>
+    </section> -->
+
+    <!-- ========== PROGRAM FACULTY ========= -->
+    <section id="faculty" class="faculty lazy-section">
+        <div class="container">
+            <h2>Programme Faculty</h2>
+            <div class="faculty-slider">
+                <div class="faculty-card">
+                    <img src="../assets/images/New-Trainers-img/Kesha Williams.jpeg" alt="Kesha Williams">
+                    <h3>Kesha Williams</h3>
+                    <p>Trainer</p>
+                    <div class="linkedin-icon">
+                        <a href="https://www.linkedin.com/in/keshaewilliams/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                            target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="faculty-card">
+                    <img src="../assets/images/update-img/Numan Mehraj.png" alt="Numan Mehraj">
+                    <h3>Numan Mehraj</h3>
+                    <p>Trainer</p>
+                    <div class="linkedin-icon">
+                        <a href="https://www.linkedin.com/in/numan-mehraj-b689478b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                            target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="faculty-card">
+                    <img src="../assets/images/New-Trainers-img/Raven Ballard.jpeg" alt="Raven Ballard">
+                    <h3>Raven Ballard</h3>
+                    <p>Trainer</p>
+                    <div class="linkedin-icon">
+                        <a href="https://www.linkedin.com/in/ravenballard/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                            target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== Real-world applications of AI in Product Management ========= -->
+    <!-- <section id="faculty" class="faculty lazy-section" style="background-color: #000;">
+        <div class="container">
+            <h2 style="color:#fff">Real-world applications of AI in Product Management</h2>
+            <img src="../assets/images/course/real-world-app.png" style="width: 100%; height: auto;">
+        </div>
+    </section> -->
+
+
+    <!-- ====== PROGRAM CERTIFICATION =========== -->
+    <div class="certificate-section">
+        <div class="certificate-image">
+            <img src="../assets/images/update-img/Business Analytics.jpg" alt="Grad Certify Certificate">
+        </div>
+        <div class="certificate-content">
+            <h2 class="certificate-title">Programme Certificate</h2>
+            <p class="certificate-text">
+                Upon successful completion of the programme, participants will receive a prestigious certificate from
+                Grad Certify Executive Education, validating their product management expertise.
+            </p>
+            <p class="certificate-text">
+                The Grad Certify certificate is globally recognized and can significantly enhance your professional
+                credentials and career prospects.
+            </p>
+            <ul class="certificate-list">
+                <li><i class="fas fa-check-circle"></i> Globally recognized credential</li>
+                <li><i class="fas fa-check-circle"></i> Digital badge for your LinkedIn profile</li>
+                <li><i class="fas fa-check-circle"></i> Access to exclusive ISB alumni network</li>
+                <li><i class="fas fa-check-circle"></i> Verification system for employers</li>
+            </ul>
+        </div>
+    </div>
+    <!-- ===== FAQ ========== -->
+    <section class="ai-faqs">
+        <div class="faq-container">
+            <h2 class="faq-title">Course Outline</h2>
+
+            <div class="faq">
+                <div class="faq-question">
+                    <span>Module 1a: Foundations of Business Analytics & Data Science?</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    Business problem framing, KPIs, Excel modelling, basic statistics,MySQL, distributions, hypothesis
+                    testing, A/B testing.
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-question">
+                    <span>Module 1b: Data Visualization & Case Studies?</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    Visualization Best Practices & Perception, Choosing the Right Chart, Introduction to Tableau and
+                    Power BI, Building Interactive Dashboards, Data Storytelling Frameworks, Advanced Visualization
+                    Techniques.
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-question">
+                    <span>Module 2: Data Warehouse for AI</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    Data is the foundation for Artificial Intelligence models. Generative AI models rely on large
+                    amounts of high-quality data to learn patterns, relationships, and structures. Understanding various
+                    data stores helps students appreciate how data is stored, managed, and retrieved. This data is
+                    usually stored in a variety of data stores viz. relational databases, NoSQL databases, data lakes.
+                    Knowledge of these data stores will enable students process various data formats
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-question">
+                    <span>Module 3: Python Crash Course for GenAI</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    Learn basic Python required for GenAI- Data Types, Flow Structures, Data Structures, Functions,
+                    Libraries, Python in Data Science.
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-question">
+                    <span>Module 4: Machine Learning Basics</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    Supervised and unsupervised learning, time series analysis, churn prediction, forecasting. Examples
+                    include sentiment analysis for customer reviews.
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-question">
+                    <span>Module 05 – Neural Networks & Deep Learning</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    Understand the transition from traditional machine learning to neural networks and deep learning and
+                    their common applications.
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-question">
+                    <span>Module 6: Introduction to LLM & Prompt Engineering</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    You can use LLM for content creation, computer programming, problem solving, dataset generation, and
+                    learning. In this model, you will learn how to effectively leverage LLM to improve your
+                    productivity. You will learning basic prompting strategies such as setting the context, role
+                    prompting, and tuning model settings. You will also learn advanced prompting methods such as
+                    chain-of-thought (COT) prompting.
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-question">
+                    <span>Module 7: Building your own AI agents</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    Supervised and unsupervised learning, time series analysis.
+                </div>
+            </div>
+
+            <!-- <div class="faq">
+            <div class="faq-question">
+                <span>Will I get career or placement support?</span>
+                <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+                Yes, we offer resume reviews, mock interviews, and guidance on building a job-ready portfolio tailored for PM/AI PM roles.
+            </div>
+        </div> -->
+
+            <!-- <div class="faq">
+            <div class="faq-question">
+                <span>What tools will I get hands-on experience with?</span>
+                <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div class="faq-answer">
+                You'll explore 16+ tools including Shorter Loop, ChatGPT, Claude, Grok, Figma, Jira, Miro, NotebookLM, LinkedIn, Perplexity, Copilot, SEMrush, SpyFu, and more.
+            </div>
+        </div> -->
+
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Education with AI?</h2>
+                <p>Join thousands of educational institutions already using Grad Certify's AI solutions.</p>
+                <center><a href="#"><button class="cta-button">Talk to Expert</button></a></center>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =============== FOOTER ================ -->
+
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer" style="background-image: url('../assets/images/footer-bg.png')">
+
+        <div class="footer-top section">
+            <div class="container grid-list">
+
+                <div class="footer-brand">
+
+                    <a href=" " class="logo">
+                        <img src="../assets/images/update-img/New-GradCertify Logo.png" width="162" height="50"
+                            alt="Grad Certify logo">
+                    </a>
+
+                    <p class="footer-brand-text">
+                        TR 306, 3 Floor AltF 101 Okhla, NH-19, CRRI, ISHWAR NAGAR , OKHLA NEW DELHI - 110044
+                    </p>
+                    <p class="footer-brand-text">
+                    <p class="footer-brand-text">
+                        USA address: <br>
+                        121/2 Sugarland, Huston, City Texas, 77479
+
+                    </p>
+
+                    <!-- <div class="wrapper">
+            <span class="span">Address:</span>
+
+            <address class="address"> B-Block, BHIVE Workspace - No.112, AKR Tech Park, "A" and, 7th Mile Hosur Rd, Krishna Reddy Industrial Area, Bengaluru, Karnataka- s560068</address>
+          </div> -->
+
+                    <div class="wrapper">
+                        <span class="span">Call:</span>
+
+                         <a href="https://wa.me/+91-7006511648" class="footer-link">+91-7006511648</a>
+                        <a href="tel:+1 202-788-3333" class="footer-link">+1 202-788-3333</a>
+                    </div>
+
+                    <div class="wrapper">
+                        <span class="span">Email:</span>
+
+                        <a href="mailto:
+
+info@gradcertify.org" class="footer-link">
+
+info@gradcertify.org</a>
+                    </div>
+
+                </div>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <p class="footer-list-title">Comapny</p>
+                    </li>
+
+                    <li>
+                        <a href="../about-us.html" class="footer-link">About</a>
+                    </li>
+
+                    <li>
+                        <a href="../job-guaranteed-courses.html" class="footer-link">Courses</a>
+                    </li>
+
+                    <li>
+                        <a href="../policy/Privacy-Policy.html" class="footer-link">Privacy Policy</a>
+                    </li>
+
+                    <li>
+                        <a href="../policy/terms-and-conditions.html" class="footer-link">Terms & Conditions</a>
+                    </li>
+
+                    <li>
+                        <a href="../policy/refund-cancellation-policy.html"
+                            class="footer-link">Refund/Cancellation policy</a>
+                    </li>
+
+                    <!--<li>-->
+                    <!--  <a href="../policy/cancellation-policy" class="footer-link">Cancellation Policy</a>-->
+                    <!--</li>-->
+
+                </ul>
+
+                <ul class="footer-list">
+
+                    <li>
+                        <p class="footer-list-title">Links</p>
+                    </li>
+
+                    <li>
+                        <a href="../contact-us.html" class="footer-link">Contact Us</a>
+                    </li>
+
+                    <li>
+                        <a href="../instructors.html" class="footer-link">Instructor</a>
+                    </li>
+
+                    <!-- <li>
+            <a href="../our-team.html" class="footer-link">Our Team</a>
+          </li> -->
+
+
+                    <li>
+                        <a href="all-blogs.html" class="footer-link">Blogs</a>
+                    </li>
+
+                    <!--<li>-->
+                    <!--  <a href="../news-updates" class="footer-link">News</a>-->
+                    <!--</li>-->
+
+                    <!--<li>
+            <a href="../current-openings.php" class="footer-link">Current Openings</a>
+          </li> -->
+
+                    <li>
+                        <a href="../faqs.html" class="footer-link">FAQs</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html" class="footer-link">Review Us</a>
+                    </li>
+
+                </ul>
+
+                <div class="footer-list">
+
+                    <p class="footer-list-title">Contacts</p>
+
+                    <p class="footer-list-text">
+                        Enter your email address to register to our newsletter subscription
+                    </p>
+
+                    <form action="#" class="newsletter-form">
+                        <input type="email" name="email_address" placeholder="Your email" required class="input-field">
+
+                        <button type="submit" class="btn has-before">
+                            <span class="span">Subscribe</span>
+
+                            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                        </button>
+                    </form>
+
+                    <ul class="social-list">
+
+                        <li>
+                            <a href="https://www.facebook.com/profile.php?id=61554376480864&amp;mibextid=nwBsNb"
+                                class="social-link" target="_blank" rel="noopener noreferrer">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.linkedin.com/company/Grad Certify-com/" class="social-link"
+                                target="_blank" rel="noopener noreferrer">
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.instagram.com/Grad Certify.s?igsh=aWFlYmExYTdxdDA5&amp;utm_source=qr"
+                                class="social-link" target="_blank" rel="noopener noreferrer">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </a>
+                        </li>
+
+                        <!--<li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li> -->
+
+                        <li>
+                            <a href="https://www.youtube.com/@Grad Certify-LeadwithSkills" class="social-link"
+                                target="_blank" rel="noopener noreferrer">
+                                <ion-icon name="logo-youtube"></ion-icon>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+
+                <p class="copyright">
+                    Copyright 2025 All Rights Reserved by <a href="../index.html" class="copyright-link">Grad
+                        Certify</a>
+                </p>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- - #BACK TO TOP -->
+    <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
+        <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
+    <!-- - custom js link -->
+    <script src="../assets/js/script.js" defer></script>
+
+    <!--  - ionicon link -->
+    <script type="module" src="../../unpkg.com/ionicons%405.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="../../unpkg.com/ionicons%405.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- ========= FAQS ========== -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentNode;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <!-- Popup Form JavaScript -->
+    <script>
+        // Get elements
+        const popup = document.getElementById('contactPopup');
+        const overlay = document.querySelector('.popupOverlay');
+        const closeBtn = document.querySelector('.close-popup');
+        const getStartedBtn = document.querySelector('.hero-content-ai .cta-button');
+        const talkToExpertBtn = document.querySelector('.cta .cta-button');
+        const contactForm = document.getElementById('contactForm');
+
+        // Update popup title based on button clicked
+        function updatePopupTitle(type) {
+            const popupTitle = document.querySelector('.popup-header h2');
+            const popupSubtitle = document.querySelector('.popup-subtitle');
+
+            if (type === 'getStarted') {
+                popupTitle.textContent = 'Get Started Today';
+                popupSubtitle.textContent = 'Fill out the form to begin your learning journey';
+            } else if (type === 'talkExpert') {
+                popupTitle.textContent = 'Talk to an Expert';
+                popupSubtitle.textContent = 'Our specialists will contact you shortly';
+            }
+        }
+
+        // Function to open popup with animation
+        function openPopup(type) {
+            updatePopupTitle(type);
+            overlay.style.display = 'block';
+            popup.style.display = 'block';
+
+            // Add small delay for the animation to work properly
+            setTimeout(() => {
+                popup.classList.add('show');
+            }, 10);
+
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        // Function to close popup
+        function closePopup() {
+            popup.classList.remove('show');
+
+            // Wait for animation to complete before hiding elements
+            setTimeout(() => {
+                popup.style.display = 'none';
+                overlay.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+            }, 300);
+        }
+
+        // Event listeners
+        getStartedBtn.addEventListener('click', () => openPopup('getStarted'));
+        talkToExpertBtn.addEventListener('click', () => openPopup('talkExpert'));
+        closeBtn.addEventListener('click', closePopup);
+        overlay.addEventListener('click', closePopup);
+
+        // Form submission
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Here you would typically handle the form submission with AJAX
+            alert('Thank you for your submission! We will contact you shortly.');
+            closePopup();
+            contactForm.reset();
+        });
+    </script>
+
+
+</body>
+
+
+<!-- Mirrored from www.Grad Certify.com/courses/ai-in-product-management by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Jul 2025 04:36:52 GMT -->
+
+</html>

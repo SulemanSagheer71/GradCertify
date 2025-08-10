@@ -1,0 +1,497 @@
+/* ============================================================================
+ * NAVIGATION SYSTEM - Clean & Organized
+ * ============================================================================ */
+
+/* ==========================================================================
+ * 1. CSS CUSTOM PROPERTIES FOR NAVIGATION
+ * ========================================================================== */
+:root {
+  --navbar-height: 70px;
+  --navbar-bg-transparent: transparent;
+  --navbar-bg-scrolled: rgba(15, 23, 42, 0.85);
+  --navbar-text-color: #ffffff;
+  --navbar-border-color: rgba(255, 255, 255, 0.1);
+  --dropdown-bg: rgba(15, 23, 42, 0.95);
+  --dropdown-text: #ffffff;
+  --primary-blue: #4f81ff;
+  --transition-smooth: all 0.3s ease;
+}
+
+/* ==========================================================================
+ * 2. BASE NAVBAR STRUCTURE
+ * ========================================================================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 11000;
+  background: transparent;
+  color: #ffffff;
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+ * 3. NAVBAR LOGO
+ * ========================================================================== */
+.navbar img {
+  width: 165px;
+  height: auto;
+  transition: all 0.3s ease;
+  filter: brightness(1);
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+/* ==========================================================================
+ * 4. SCROLLED NAVBAR STATE
+ * ========================================================================== */
+.navbar.scrolled {
+  background: var(--navbar-bg-scrolled);
+  /*backdrop-filter: blur(12px);*/
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.85);
+}
+
+.navbar.scrolled img {
+  width: 155px;
+  filter: brightness(1.3) drop-shadow(0 2px 8px rgba(255, 255, 255, 0.4));
+  /* background: rgba(255, 255, 255, 0.08); */
+  padding: 6px 12px;
+  /* border-radius: 8px; */
+  /* border: 1px solid rgba(255, 255, 255, 0.15); */
+  /*backdrop-filter: blur(8px);*/
+  /* -webkit-backdrop-filter: blur(8px);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2); */
+}
+
+/* ==========================================================================
+ * 5. DESKTOP MAIN MENU
+ * ========================================================================== */
+.main-menu-items {
+  display: flex;
+  align-items: center;
+}
+
+.main-menu-list {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Desktop Menu Links */
+.main-menu-list li a {
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+}
+
+.main-menu-list li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Scrolled State Menu Links */
+.navbar.scrolled .main-menu-list li a {
+  background: rgba(255, 255, 255, 0.08);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .main-menu-list li a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+ * 6. DROPDOWN SYSTEM
+ * ========================================================================== */
+.has-dropdown {
+  position: relative;
+}
+
+.dropdown-icon {
+  font-size: 0.875rem;
+  margin-left: 0.5rem;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.has-dropdown:hover .dropdown-icon {
+  transform: rotate(180deg);
+  color: #4f81ff;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  min-width: 350px;
+  max-width: 450px;
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.95) 0%, 
+    rgba(6, 78, 59, 0.92) 100%);
+  /*backdrop-filter: blur(12px);*/
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 8px 20px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(16, 185, 129, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  padding: 0;
+}
+
+.dropdown-content h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  padding: 0 4px 8px;
+  border-bottom: 2px solid rgba(16, 185, 129, 0.4);
+}
+
+.dropdown-link {
+  display: block;
+  padding: 12px 16px;
+  margin: 4px 0;
+  border-radius: 8px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.2s ease;
+}
+
+.dropdown-link:hover {
+  background: #4f81ff;
+  border-color: #4f81ff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 129, 255, 0.3);
+}
+
+.course-item {
+  display: block;
+}
+
+.course-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.dropdown-link:hover .course-title {
+  color: #ffffff;
+}
+
+/* View All Courses Button */
+.view-all-courses {
+  display: block;
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #3b73d4 100%);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.view-all-courses:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(79, 129, 255, 0.4);
+}
+
+/* ==========================================================================
+ * 7. NESTED DROPDOWN SYSTEM
+ * ========================================================================== */
+.has-nested-dropdown {
+  position: relative;
+}
+
+.nested-dropdown-icon {
+  font-size: 0.75rem;
+  margin-left: auto;
+  transition: all 0.25s ease;
+  color: rgba(255, 255, 255, 0.7);
+  transform: rotate(-90deg);
+}
+
+.nested-dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 12px);
+  min-width: 350px;
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.95) 0%, 
+    rgba(6, 78, 59, 0.92) 100%);
+  /*backdrop-filter: blur(12px);*/
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 8px 20px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(16, 185, 129, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-12px);
+  transition: all 0.25s ease;
+  z-index: 1001;
+  padding: 8px;
+}
+
+.has-nested-dropdown:hover .nested-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.has-nested-dropdown:hover > .dropdown-link {
+  background: #4f81ff;
+  border-color: #4f81ff;
+  color: #ffffff;
+}
+
+.has-nested-dropdown:hover > .dropdown-link .course-title {
+  color: #ffffff;
+}
+
+.has-nested-dropdown:hover .nested-dropdown-icon {
+  transform: rotate(0deg);
+  color: #ffffff;
+}
+
+/* Nested Dropdown Links */
+.nested-dropdown-menu .dropdown-link,
+.nested-dropdown-menu .course-item,
+.nested-dropdown-menu .nested-dropdown-link {
+  display: block;
+  margin: 6px 0;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nested-dropdown-menu .dropdown-link:hover,
+.nested-dropdown-menu .nested-dropdown-link:hover {
+  background: #4f81ff;
+  border-color: #4f81ff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(79, 129, 255, 0.4);
+}
+
+.nested-dropdown-menu .course-title {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.5;
+  font-weight: 500;
+  margin: 0;
+  display: block;
+  padding-right: 0;
+}
+
+.nested-dropdown-menu .dropdown-link:hover .course-title,
+.nested-dropdown-menu .nested-dropdown-link:hover .course-title {
+  color: #ffffff;
+}
+
+/* Coming Soon Items */
+.nested-dropdown-menu .course-item.coming-soon {
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.nested-dropdown-menu .course-item.coming-soon:hover {
+  background: rgba(220, 38, 38, 0.15);
+  border-color: rgba(220, 38, 38, 0.4);
+  transform: none;
+  box-shadow: none;
+}
+
+.nested-dropdown-menu .course-item.coming-soon .course-title {
+  color: #ef4444;
+}
+
+.nested-dropdown-menu .coming-soon-tag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  background: rgba(220, 38, 38, 0.2);
+  color: #ef4444;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+ * 8. RESOURCES DROPDOWN SYSTEM
+ * ========================================================================== */
+
+/* Resources Section */
+.dropdown-section {
+  margin-bottom: 16px;
+}
+
+/* Resource Items */
+.resource-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.resource-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.resource-description {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Resource Link Hover */
+.dropdown-link:hover .resource-title {
+  color: #ffffff;
+}
+
+.dropdown-link:hover .resource-description {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Dropdown Footer */
+.dropdown-footer {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.view-all-resources {
+  display: block;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.view-all-resources:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.view-all-resources i {
+  margin-left: 8px;
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+ * 9. RESPONSIVE DESIGN
+ * ========================================================================== */
+
+/* Nested dropdown responsive positioning */
+@media screen and (max-width: 1200px) {
+  .nested-dropdown-menu {
+    left: calc(-100% - 12px);
+    transform: translateX(12px);
+  }
+  
+  .has-nested-dropdown:hover .nested-dropdown-menu {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .main-menu-items {
+    display: none;
+  }
+  
+  .navbar-flex {
+    padding: 0 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar.scrolled img {
+    width: 140px;
+  }
+  
+  .navbar-flex {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar.scrolled img {
+    width: 125px;
+  }
+  
+  .navbar-flex {
+    padding: 0 0.75rem;
+    height: 60px;
+  }
+} 

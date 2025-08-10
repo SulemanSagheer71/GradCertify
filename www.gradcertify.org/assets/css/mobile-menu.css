@@ -1,0 +1,721 @@
+/* ============================================================================
+ * MOBILE MENU SYSTEM - Modern Toggle Design
+ * ============================================================================ */
+
+/* ==========================================================================
+ * 1. CSS CUSTOM PROPERTIES FOR MOBILE MENU
+ * ========================================================================== */
+:root {
+  --mobile-menu-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  --mobile-menu-overlay: rgba(0, 0, 0, 0.95);
+  --mobile-menu-text: #ffffff;
+  --mobile-menu-accent: #10b981;
+  --mobile-menu-accent-hover: #059669;
+  --mobile-menu-border: rgba(255, 255, 255, 0.15);
+  --mobile-menu-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  --mobile-transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --hamburger-size: 30px;
+  --hamburger-line-height: 3px;
+}
+
+/* ==========================================================================
+ * 2. MOBILE MENU CONTAINER
+ * ========================================================================== */
+.mobile-menu {
+  display: none;
+  position: relative;
+  z-index: 11002;
+}
+
+/* ==========================================================================
+ * 3. MODERN MOBILE MENU TOGGLE
+ * ========================================================================== */
+.mobile-menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+  z-index: 11003;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.25);
+}
+
+.mobile-menu-toggle:hover {
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.35);
+  transform: translateY(-2px);
+}
+
+.mobile-menu-toggle:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+/* Modern hamburger lines */
+.mobile-menu-toggle span {
+  display: block;
+  height: 2px;
+  width: 20px;
+  background: #ffffff;
+  border-radius: 1px;
+  margin: 3px 0;
+  transition: all 0.2s ease;
+  transform-origin: center;
+  opacity: 0.9;
+}
+
+.mobile-menu-toggle:hover span {
+  background: #ffffff;
+  opacity: 1;
+}
+
+/* Hide toggle when menu is active */
+.mobile-menu-toggle.active {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+ * 4. MOBILE MENU OVERLAY AND SIDEBAR
+ * ========================================================================== */
+
+/* Backdrop Overlay */
+.mobile-menu-items {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 11000;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+/* Mobile Menu Sidebar */
+.mobile-menu-items::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -80%;
+  width: 80%;
+  height: 100%;
+  background: var(--mobile-menu-bg);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Texture Overlay on Sidebar */
+.mobile-menu-items::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -80%;
+  width: 80%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="%23ffffff" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
+}
+
+/* Active State */
+.mobile-menu-items.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-items.active::after {
+  right: 0;
+}
+
+.mobile-menu-items.active::before {
+  right: 0;
+}
+
+/* ==========================================================================
+ * 5. MOBILE MENU NAVIGATION
+ * ========================================================================== */
+.mobile-menu-list {
+  list-style: none;
+  padding: 2rem 1.5rem;
+  margin: 0;
+  text-align: left;
+  width: 80%;
+  height: 100%;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  right: -80%;
+  background: transparent;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 2;
+  padding-top: 4rem;
+}
+
+.mobile-menu-items.active .mobile-menu-list {
+  right: 0;
+}
+
+.mobile-menu-list li {
+  margin: 0 0 1rem 0;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: none;
+}
+
+.mobile-menu-items.active .mobile-menu-list li {
+  animation: slideInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Staggered Animation Delays */
+.mobile-menu-items.active .mobile-menu-list li:nth-child(1) { animation-delay: 0.1s; }
+.mobile-menu-items.active .mobile-menu-list li:nth-child(2) { animation-delay: 0.2s; }
+.mobile-menu-items.active .mobile-menu-list li:nth-child(3) { animation-delay: 0.3s; }
+.mobile-menu-items.active .mobile-menu-list li:nth-child(4) { animation-delay: 0.4s; }
+.mobile-menu-items.active .mobile-menu-list li:nth-child(5) { animation-delay: 0.5s; }
+.mobile-menu-items.active .mobile-menu-list li:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+ * 6. MOBILE MENU LINKS
+ * ========================================================================== */
+.mobile-menu-list > li > a,
+.mobile-menu-link {
+  display: block;
+  padding: 1rem 0;
+  color: var(--mobile-menu-text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: all 0.3s ease;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  line-height: 1.4;
+}
+
+.mobile-menu-list > li > a::before,
+.mobile-menu-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--mobile-menu-accent), #3b82f6);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.mobile-menu-list > li > a:hover,
+.mobile-menu-link:hover {
+  color: var(--mobile-menu-accent);
+  padding-left: 1rem;
+}
+
+.mobile-menu-list > li > a:hover::before,
+.mobile-menu-link:hover::before {
+  width: 100%;
+}
+
+/* ==========================================================================
+ * 7. MOBILE DROPDOWN SYSTEM
+ * ========================================================================== */
+.mobile-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.mobile-dropdown-toggle {
+  display: block;
+  padding: 1rem 0;
+  background: none;
+  border: none;
+  color: var(--mobile-menu-text);
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  text-decoration: none;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  line-height: 1.4;
+}
+
+.mobile-dropdown-toggle::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--mobile-menu-accent), #3b82f6);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.mobile-dropdown-toggle:hover {
+  color: var(--mobile-menu-accent);
+  padding-left: 1rem;
+}
+
+.mobile-dropdown-toggle:hover::before {
+  width: 100%;
+}
+
+.mobile-dropdown-icon,
+.mobile-dropdown-toggle i {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-icon,
+.mobile-dropdown.active .mobile-dropdown-toggle i {
+  transform: rotate(180deg);
+}
+
+/* ==========================================================================
+ * 8. MOBILE DROPDOWN MENU
+ * ========================================================================== */
+.mobile-dropdown-menu {
+  display: none;
+  margin-top: 1rem;
+  padding: 0 0.8rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.mobile-dropdown.active .mobile-dropdown-menu {
+  display: block;
+  animation: fadeInScale 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes fadeInScale {
+  from { 
+    opacity: 0; 
+    transform: scale(0.9) translateY(-10px);
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1) translateY(0);
+  }
+}
+
+.mobile-dropdown-link {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  margin: 0.6rem 0;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.95rem;
+  text-transform: none;
+  letter-spacing: 0.2px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.5;
+}
+
+.mobile-dropdown-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.2), transparent);
+  transition: left 0.4s ease;
+}
+
+.mobile-dropdown-link:hover {
+  color: var(--mobile-menu-text);
+  border-color: rgba(16, 185, 129, 0.5);
+  background: rgba(16, 185, 129, 0.15);
+  transform: translateY(-2px);
+  box-shadow: var(--mobile-menu-shadow);
+}
+
+.mobile-dropdown-link:hover::before {
+  left: 100%;
+}
+
+/* ==========================================================================
+ * 9. MOBILE COURSE AND RESOURCE ITEMS
+ * ========================================================================== */
+.mobile-course-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.mobile-course-title,
+.course-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.4;
+  letter-spacing: 0.1px;
+  margin: 0;
+  display: block;
+}
+
+.mobile-dropdown-link:hover .mobile-course-title,
+.mobile-dropdown-link:hover .course-title {
+  color: var(--mobile-menu-text);
+}
+
+.mobile-resource-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.mobile-resource-title,
+.resource-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.4;
+  letter-spacing: 0.1px;
+  margin-bottom: 3px;
+  display: block;
+}
+
+.mobile-resource-description,
+.resource-description {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.5;
+  font-weight: 300;
+  margin: 0;
+  display: block;
+}
+
+.mobile-dropdown-link:hover .mobile-resource-title,
+.mobile-dropdown-link:hover .resource-title {
+  color: var(--mobile-menu-text);
+}
+
+.mobile-dropdown-link:hover .mobile-resource-description,
+.mobile-dropdown-link:hover .resource-description {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ==========================================================================
+ * 10. MOBILE NESTED DROPDOWN
+ * ========================================================================== */
+.mobile-nested-dropdown {
+  margin: 0.8rem 0;
+}
+
+.mobile-nested-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  margin: 0.5rem 0;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: 1px solid var(--mobile-menu-border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.mobile-nested-icon {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.mobile-nested-dropdown.active .mobile-nested-icon {
+  transform: rotate(180deg);
+  color: var(--mobile-menu-accent);
+}
+
+.mobile-nested-menu {
+  display: none;
+  margin-top: 0.5rem;
+  padding-left: 0.8rem;
+}
+
+.mobile-nested-dropdown.active .mobile-nested-menu {
+  display: block;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.mobile-nested-link {
+  display: block;
+  padding: 0.7rem 1rem;
+  margin: 0.4rem 0;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  transition: all 0.3s ease;
+  text-align: left;
+  line-height: 1.4;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.mobile-nested-link:hover {
+  color: var(--mobile-menu-text);
+  border-color: rgba(16, 185, 129, 0.4);
+  background: rgba(16, 185, 129, 0.12);
+  transform: translateX(8px);
+}
+
+/* ==========================================================================
+ * 11. COMING SOON ITEMS
+ * ========================================================================== */
+.mobile-course-item.coming-soon {
+  padding: 0.5rem 0.8rem;
+  margin: 0.4rem 0;
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  border-radius: 8px;
+  background: rgba(220, 38, 38, 0.06);
+  text-align: left;
+  cursor: not-allowed;
+  display: block;
+}
+
+.mobile-course-item.coming-soon .mobile-course-title,
+.mobile-course-item.coming-soon .course-title {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.mobile-coming-soon-tag,
+.coming-soon-tag {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 0.15rem 0.6rem;
+  background: rgba(220, 38, 38, 0.15);
+  color: #ef4444;
+  font-size: 0.65rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* ==========================================================================
+ * 12. VIEW ALL BUTTONS
+ * ========================================================================== */
+.mobile-view-all {
+  background: linear-gradient(135deg, var(--mobile-menu-accent) 0%, var(--mobile-menu-accent-hover) 100%);
+  color: var(--mobile-menu-text);
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.25);
+  transition: all 0.3s ease;
+}
+
+.mobile-view-all::before {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+.mobile-view-all:hover {
+  background: linear-gradient(135deg, var(--mobile-menu-accent-hover) 0%, #047857 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(16, 185, 129, 0.4);
+}
+
+.mobile-view-all i {
+  margin-left: 6px;
+  font-size: 0.8rem;
+}
+
+/* ==========================================================================
+ * 13. CLOSE BUTTON
+ * ========================================================================== */
+.mobile-menu-close {
+  position: absolute;
+  top: 1.5rem;
+  right: -80%;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--mobile-menu-border);
+  border-radius: 50%;
+  color: var(--mobile-menu-text);
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 3;
+  margin-right: 1.5rem;
+}
+
+.mobile-menu-items.active .mobile-menu-close {
+  right: 0;
+}
+
+.mobile-menu-close:hover {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #ef4444;
+  color: #ef4444;
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+}
+
+/* ==========================================================================
+ * 14. RESPONSIVE DESIGN FOR MOBILE MENU
+ * ========================================================================== */
+@media screen and (max-width: 992px) {
+  .mobile-menu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-menu-list > li > a,
+  .mobile-menu-link,
+  .mobile-dropdown-toggle {
+    font-size: 1.05rem;
+    padding: 0.9rem 0;
+  }
+  
+  .mobile-dropdown-link {
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem;
+  }
+  
+  .mobile-menu-list {
+    padding: 1.5rem 1.2rem;
+    padding-top: 3.5rem;
+  }
+  
+  .mobile-menu-close {
+    top: 1.2rem;
+    margin-right: 1.2rem;
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mobile-menu-list > li > a,
+  .mobile-menu-link,
+  .mobile-dropdown-toggle {
+    font-size: 1rem;
+    padding: 0.8rem 0;
+  }
+  
+  .mobile-dropdown-link {
+    padding: 0.7rem 1rem;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .mobile-menu-list {
+    padding: 1.2rem 1rem;
+    padding-top: 3rem;
+  }
+  
+  .mobile-menu-close {
+    top: 1rem;
+    margin-right: 1rem;
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+  
+  .mobile-menu-list li {
+    margin: 0 0 0.8rem 0;
+  }
+}
+
+/* ==========================================================================
+ * 15. ACCESSIBILITY AND FOCUS STATES
+ * ========================================================================== */
+.mobile-menu-toggle:focus,
+.mobile-dropdown-toggle:focus,
+.mobile-dropdown-link:focus,
+.mobile-nested-link:focus,
+.mobile-menu-close:focus {
+  outline: 2px solid var(--mobile-menu-accent);
+  outline-offset: 2px;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu-toggle span,
+  .mobile-menu-overlay,
+  .mobile-menu-nav,
+  .mobile-menu-list li,
+  .mobile-dropdown-link,
+  .mobile-nested-link {
+    transition: none;
+    animation: none;
+  }
+} 
